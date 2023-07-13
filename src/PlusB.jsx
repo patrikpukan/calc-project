@@ -1,18 +1,14 @@
-import Button from './Button.jsx';
+import './Button.css';
 import './App.css';
 
 
-function PlusB() {
-  
-  const handleClick = () => {
-    console.log('Button clicked');
-  }
+function PlusB({onClick, textValue}) { 
   const buttonValue = '+';
   return (
     <>
-      <Button onclick={handleClick} text={buttonValue}>
-        <p className="mathButton"></p>
-      </Button>
+      <button onClick={onClick}>
+        {textValue}
+      </button>
     </>
   )
   }
